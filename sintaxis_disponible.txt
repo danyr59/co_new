@@ -1,0 +1,108 @@
+# SINTAXIS DISPONIBLE EN EL COMPILADOR
+# =====================================
+
+# 1. OPERACIONES ARITMÉTICAS BÁSICAS
+# -----------------------------------
+5 + 3 * 2                    # Resultado: 11
+(5 + 3) * 2                  # Resultado: 16
+10 - 4                       # Resultado: 6
+15 / 3                       # Resultado: 5
+17 % 5                       # Resultado: 2
+
+# 2. OPERACIONES LÓGICAS
+# ----------------------
+true and false               # Resultado: false
+true or false                # Resultado: true
+true xor false               # Resultado: true
+not false                    # Resultado: true
+
+# 3. OPERACIONES DE COMPARACIÓN
+# -----------------------------
+10 > 5                       # Resultado: true
+3 < 7                        # Resultado: true
+5 <= 10                      # Resultado: true
+3 >= 1                       # Resultado: true
+5 == 5                       # Resultado: true
+4 != 3                       # Resultado: true
+
+# 4. EXPRESIONES LET (NUEVA SINTAXIS)
+# -----------------------------------
+let x = 10 in x + 5          # Resultado: 15
+let mensaje = "Hola" in print(mensaje)  # Imprime: Hola
+let x = 10 in let y = 20 in x + y       # Resultado: 30
+
+# 5. EXPRESIONES CONDICIONALES
+# ----------------------------
+if true 10 else 20           # Resultado: 10
+if false 10 else 20          # Resultado: 20
+if 5 > 3 42 else 0           # Resultado: 42
+
+# 6. CONVERSIÓN DE TIPOS
+# ----------------------
+itos(42)                     # Resultado: "42"
+rtos(3.14)                   # Resultado: "3.14"
+itor(5)                      # Resultado: 5.0
+rtoi(3.14)                   # Resultado: 3
+
+# 7. CONCATENACIÓN DE STRINGS
+# ---------------------------
+"Hola" # " mundo"            # Resultado: "Hola mundo"
+itos(42) # " es la respuesta" # Resultado: "42 es la respuesta"
+
+# 8. FUNCIONES PRINT
+# ------------------
+print("Hola mundo")          # Imprime: Hola mundo
+print(42)                    # Imprime: 42
+print(true)                  # Imprime: true
+
+# 9. PARES (NUEVA SINTAXIS)
+# --------------------------
+(1, 2)                       # Resultado: (1, 2)
+("Hola", 42)                 # Resultado: ("Hola", 42)
+(3.14, true)                 # Resultado: (3.14, true)
+
+# 10. OPERACIONES CON PARES
+# --------------------------
+fst((1, 2))                  # Resultado: 1
+snd((1, 2))                  # Resultado: 2
+fst(("Hola", 42))            # Resultado: "Hola"
+snd(("Hola", 42))            # Resultado: 42
+
+# 11. DEFINICIÓN DE FUNCIONES (NUEVA SINTAXIS)
+# ---------------------------------------------
+fun cuadrado(x) x * x        # Define función cuadrado
+fun doble(x) x + x           # Define función doble
+fun factorial(n) if n == 0 1 else n * factorial(n - 1)  # Función recursiva
+
+# 12. LLAMADAS A FUNCIONES
+# ------------------------
+cuadrado(5)                  # Resultado: 25 (si cuadrado está definida)
+doble(10)                    # Resultado: 20 (si doble está definida)
+
+# 13. NÚMEROS REALES
+# ------------------
+3.14 + 2.86                  # Resultado: 6.0
+1.5 * 2.0                    # Resultado: 3.0
+
+# 14. EXPRESIONES COMPLEJAS
+# -------------------------
+let x = 10 in let y = 5 in if x > y (x + y) else (x - y)  # Resultado: 15
+let resultado = cuadrado(5) in print(resultado)            # Imprime: 25
+
+# 15. OPERACIONES CON ARRAYS
+# --------------------------
+empty                        # Array vacío
+head([1, 2, 3])              # Primer elemento
+tail([1, 2, 3])              # Resto del array
+5 in [1, 2, 3, 4, 5]        # Verificar membresía
+
+# 16. COMENTARIOS
+# ---------------
+# Este es un comentario de línea
+@ Este es un comentario multilínea @
+
+# 17. EJEMPLOS COMBINADOS
+# -----------------------
+let x = 10 in let y = 20 in print(itos(x + y))  # Imprime: 30
+let par = (5, 10) in fst(par) + snd(par)        # Resultado: 15
+if true print("Verdadero") else print("Falso")  # Imprime: Verdadero

@@ -1,0 +1,5 @@
+
+let(cuadrado)(fun(cuadrado)(x)(x + 5 ))
+(
+   print(cuadrado(cuadrado(5)))
+)
